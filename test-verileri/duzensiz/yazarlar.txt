@@ -1,0 +1,3 @@
+cem-kucuk.txt
+yazarlar.bat
+yazarlar.txt
