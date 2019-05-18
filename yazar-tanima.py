@@ -6,6 +6,7 @@ import codecs
 import string
 from math import sqrt
 import operator
+os.system('isim_cek.bat')
 
 def egitim_isim_duzenle():
       dosya_oku = open("C:\Users\Furkan\Desktop\yazar-tanima\egitim-verileri\duzensiz\yazarlar.txt", "r").read()
@@ -18,7 +19,7 @@ def egitim_isim_duzenle():
 
 def test_isim_duzenle():
       dosya_oku = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzensiz\\yazarlar.txt", "r").read()
-      yazarlar = re.split(".txt|yazarlar.txt|yazarlar.bat|yazarlar1.txt",dosya_oku)
+      yazarlar = re.split(".txt|yazarlar.txt|yazarlar.bat|yazarlar1.txt|testler",dosya_oku)
       dosya_yaz = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzenli\\yazarlar.txt", "w")
       for i in yazarlar:
             dosya_yaz.write(i.strip()+"\n")
@@ -146,7 +147,7 @@ def en_yakin_k_komsu(k):
       print u"Sonuclar Gösteriliyor."
       os.system('sonuc.bat')
 
-os.system('isim_cek.bat')
+
 egitim_isim_duzenle()
 test_isim_duzenle()
 egitim_metin_duzenle()
@@ -155,4 +156,4 @@ kelimeler()
 egitim_kelime_say()
 test_kelime_say()
 test_data_al()
-en_yakin_k_komsu(3)
+en_yakin_k_komsu(10)

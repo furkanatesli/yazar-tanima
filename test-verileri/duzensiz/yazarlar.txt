@@ -1,3 +1,4 @@
-cem-kucuk.txt
+fehmi-koru-(7).txt
+testler
 yazarlar.bat
 yazarlar.txt
