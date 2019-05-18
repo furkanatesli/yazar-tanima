@@ -1,0 +1,2 @@
+start SONUC.txt
+exit

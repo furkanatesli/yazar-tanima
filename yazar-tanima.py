@@ -1,59 +1,61 @@
+﻿#!/usr/bin/python
 # -*- coding: utf-8 -*-
 import os
 import re
 import codecs
 import string
-
-os.system('ac.bat')
+from math import sqrt
+import operator
 
 def egitim_isim_duzenle():
-    dosya_oku = open("C:\Users\Furkan\Desktop\yazar-tanima\egitim-verileri\duzensiz\yazarlar.txt", "r").read()
-    yazarlar = re.split(".txt|yazarlar.txt|yazarlar.bat|yazarlar1.txt",dosya_oku)
-    dosya_yaz = open("C:\Users\Furkan\Desktop\yazar-tanima\egitim-verileri\duzenli\yazarlar.txt", "w")
-    for i in yazarlar:
-      dosya_yaz.write(i.strip()+"\n")
-      print(i.strip()+"\n")
-    dosya_yaz.close()
+      dosya_oku = open("C:\Users\Furkan\Desktop\yazar-tanima\egitim-verileri\duzensiz\yazarlar.txt", "r").read()
+      yazarlar = re.split(".txt|yazarlar.txt|yazarlar.bat|yazarlar1.txt",dosya_oku)
+      dosya_yaz = open("C:\Users\Furkan\Desktop\yazar-tanima\egitim-verileri\duzenli\yazarlar.txt", "w")
+      for i in yazarlar:
+            dosya_yaz.write(i.strip()+"\n")
+      dosya_yaz.close()
+      print u"Eğitim Yazar İsimleri Alındı"
 
 def test_isim_duzenle():
-    dosya_oku = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzensiz\\yazarlar.txt", "r").read()
-    yazarlar = re.split(".txt|yazarlar.txt|yazarlar.bat|yazarlar1.txt",dosya_oku)
-    dosya_yaz = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzenli\\yazarlar.txt", "w")
-    for i in yazarlar:
-      dosya_yaz.write(i.strip()+"\n")
-      print(i.strip()+"\n")
-    dosya_yaz.close()
+      dosya_oku = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzensiz\\yazarlar.txt", "r").read()
+      yazarlar = re.split(".txt|yazarlar.txt|yazarlar.bat|yazarlar1.txt",dosya_oku)
+      dosya_yaz = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzenli\\yazarlar.txt", "w")
+      for i in yazarlar:
+            dosya_yaz.write(i.strip()+"\n")
+      dosya_yaz.close()
+      print u"Test Yazar İsimleri Alındı"
 
 def egitim_metin_duzenle():
-    dosya_oku=open("C:\Users\Furkan\Desktop\yazar-tanima\egitim-verileri\duzenli\yazarlar.txt", "r")
-    yazarlar=dosya_oku.read().strip().split()
-    for yazar_adi in yazarlar:
-      yazar_dosya_oku = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\egitim-verileri\\duzensiz\\"+yazar_adi+".txt", "r").read()
-      yazar_dosya_oku = yazar_dosya_oku.lower()
-      yazar_dosya_oku = yazar_dosya_oku.replace("\xf6","o").replace("\xe7","c").replace("\xfd","i").replace("\xdc","u").replace("\xf0","g").replace("\xfc","u").replace("\xfe","s").replace("\xdd","i").replace("\xd6","o").replace("\x91","").replace("(","").replace(")","").replace("\x85","").replace("\xee","i").replace("-","")
-      yazar_dosya_oku = yazar_dosya_oku.replace(".","").replace(",","").replace("'","").replace('"','').replace("\x92","").replace("\x93","").replace("\x94","").replace("\xc7","c").replace("\xd0","g").replace("\xde","s").replace("?","").replace("\xe2","a").replace("!","").replace("\xc2","a").replace("\xfb","u").replace(":","").replace(";","")
-      yazar_dosya_yaz = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\egitim-verileri\\duzenli\\"+yazar_adi+".txt",  "w")
-      yazar_dosya_yaz.write(str(yazar_dosya_oku.split()))
-      yazar_dosya_yaz.close()
+      dosya_oku=open("C:\Users\Furkan\Desktop\yazar-tanima\egitim-verileri\duzenli\yazarlar.txt", "r")
+      yazarlar=dosya_oku.read().strip().split()
+      for yazar_adi in yazarlar:
+            yazar_dosya_oku = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\egitim-verileri\\duzensiz\\"+yazar_adi+".txt", "r").read()
+            yazar_dosya_oku = yazar_dosya_oku.lower()
+            yazar_dosya_oku = yazar_dosya_oku.replace("\xf6","o").replace("\xe7","c").replace("\xfd","i").replace("\xdc","u").replace("\xf0","g").replace("\xfc","u").replace("\xfe","s").replace("\xdd","i").replace("\xd6","o").replace("\x91","").replace("(","").replace(")","").replace("\x85","").replace("\xee","i").replace("-","")
+            yazar_dosya_oku = yazar_dosya_oku.replace(".","").replace(",","").replace("'","").replace('"','').replace("\x92","").replace("\x93","").replace("\x94","").replace("\xc7","c").replace("\xd0","g").replace("\xde","s").replace("?","").replace("\xe2","a").replace("!","").replace("\xc2","a").replace("\xfb","u").replace(":","").replace(";","")
+            yazar_dosya_yaz = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\egitim-verileri\\duzenli\\"+yazar_adi+".txt",  "w")
+            yazar_dosya_yaz.write(str(yazar_dosya_oku.split()))
+            yazar_dosya_yaz.close()
+      print u"Eğitim Metinleri Düzenlendi"
 
 def test_metin_duzenle():
-    dosya_oku=open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzenli\\yazarlar.txt", "r")
-    yazarlar=dosya_oku.read().strip().split()
-    for yazar_adi in yazarlar:
-      yazar_dosya_oku = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzensiz\\"+yazar_adi+".txt", "r").read()
-      yazar_dosya_oku = yazar_dosya_oku.lower()
-      yazar_dosya_oku = yazar_dosya_oku.replace("\xf6","o").replace("\xe7","c").replace("\xfd","i").replace("\xdc","u").replace("\xf0","g").replace("\xfc","u").replace("\xfe","s").replace("\xdd","i").replace("\xd6","o").replace("\x91","").replace("(","").replace(")","").replace("\x85","").replace("\xee","i").replace("-","")
-      yazar_dosya_oku = yazar_dosya_oku.replace(".","").replace(",","").replace("'","").replace('"','').replace("\x92","").replace("\x93","").replace("\x94","").replace("\xc7","c").replace("\xd0","g").replace("\xde","s").replace("?","").replace("\xe2","a").replace("!","").replace("\xc2","a").replace("\xfb","u").replace(":","").replace(";","")
-      yazar_dosya_yaz = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzenli\\"+yazar_adi+".txt",  "w")
-      yazar_dosya_yaz.write(str(yazar_dosya_oku.split()))
-      yazar_dosya_yaz.close()
+      dosya_oku=open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzenli\\yazarlar.txt", "r")
+      yazarlar=dosya_oku.read().strip().split()
+      for yazar_adi in yazarlar:
+            yazar_dosya_oku = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzensiz\\"+yazar_adi+".txt", "r").read()
+            yazar_dosya_oku = yazar_dosya_oku.lower()
+            yazar_dosya_oku = yazar_dosya_oku.replace("\xf6","o").replace("\xe7","c").replace("\xfd","i").replace("\xdc","u").replace("\xf0","g").replace("\xfc","u").replace("\xfe","s").replace("\xdd","i").replace("\xd6","o").replace("\x91","").replace("(","").replace(")","").replace("\x85","").replace("\xee","i").replace("-","")
+            yazar_dosya_oku = yazar_dosya_oku.replace(".","").replace(",","").replace("'","").replace('"','').replace("\x92","").replace("\x93","").replace("\x94","").replace("\xc7","c").replace("\xd0","g").replace("\xde","s").replace("?","").replace("\xe2","a").replace("!","").replace("\xc2","a").replace("\xfb","u").replace(":","").replace(";","")
+            yazar_dosya_yaz = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzenli\\"+yazar_adi+".txt",  "w")
+            yazar_dosya_yaz.write(str(yazar_dosya_oku.split()))
+            yazar_dosya_yaz.close()
+      print u"Test Metinleri Düzenlendi"
 
 def kelimeler():
       dosya_oku=open("C:\Users\Furkan\Desktop\yazar-tanima\egitim-verileri\duzenli\yazarlar.txt", "r")
       yazarlar=dosya_oku.read().strip().split()
       global kelimeler
       kelimeler = {}
-      
       for yazar_adi in yazarlar:
             egitim_kelime_dizi_oku = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\egitim-verileri\\duzenli\\"+yazar_adi+".txt", "r").read()
             egitim_kelime_dizi_oku = egitim_kelime_dizi_oku.replace("[","").replace("]","").replace("'","").replace(",","")
@@ -70,8 +72,9 @@ def kelimeler():
             for kelime in test_kelime_dizi_oku:
                   if kelime not in kelimeler:
                         kelimeler[kelime] = 0
-      for sayi in kelimeler.keys():
-                  print("%s %s" %(sayi,kelimeler[sayi]))
+      print u"Kelime Sayısı Hesaplandı."
+      print "Toplam Kelime Sayisi= ",len(kelimeler)
+
 def egitim_kelime_say():
       dosya_oku=open("C:\Users\Furkan\Desktop\yazar-tanima\egitim-verileri\duzenli\yazarlar.txt", "r")
       yazarlar=dosya_oku.read().strip().split()
@@ -85,11 +88,11 @@ def egitim_kelime_say():
                         kelime_sayisi[kelime] += 1
                   else:
                         kelime_sayisi[kelime] = 1
-            print("*************************"+yazar_adi+"*************************")
             yazar_sonuc_yaz = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\egitim-verileri\\sonuclar\\"+yazar_adi+".txt",  "w")
             for sayi in kelime_sayisi.keys():
-                  yazar_sonuc_yaz.write(("%s" %(kelime_sayisi[sayi])))
+                  yazar_sonuc_yaz.write(("%s" %(kelime_sayisi[sayi]))+",")
             yazar_sonuc_yaz.close()
+      print u"Eğitim Dosyası Kelimeleri Sayıldı."
 
 def test_kelime_say():
       dosya_oku=open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzenli\\yazarlar.txt", "r")
@@ -104,12 +107,46 @@ def test_kelime_say():
                         kelime_sayisi[kelime] += 1
                   else:
                         kelime_sayisi[kelime] = 1
-            print("*************************"+yazar_adi+"*************************")
             yazar_sonuc_yaz = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\sonuc\\"+yazar_adi+".txt",  "w")
             for sayi in kelime_sayisi.keys():
-                  yazar_sonuc_yaz.write(("%s" %(kelime_sayisi[sayi])))
+                  yazar_sonuc_yaz.write(("%s" %(kelime_sayisi[sayi]))+",")
             yazar_sonuc_yaz.close()  
+      print u"Test Dosyası Kelimeleri Sayıldı."
 
+def test_data_al():
+      global test_data
+      test_dosya_oku=open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\duzenli\\yazarlar.txt", "r")
+      test_yazarlar=test_dosya_oku.read().strip().split()
+      for test_adi in test_yazarlar:
+            test_data = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\test-verileri\\sonuc\\"+test_adi+".txt", "r").read()
+            test_data = test_data.split(",")
+            test_data = list(test_data)
+            del test_data[-1]
+      print u"Test Verileri Alındı."
+
+def en_yakin_k_komsu(k):
+      egitim_dosya_oku=open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\egitim-verileri\\duzenli\\yazarlar.txt", "r")
+      egitim_yazarlar=egitim_dosya_oku.read().strip().split()
+      sonuclar = {}
+      for yazar_adi in egitim_yazarlar:
+            egitim_data = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\egitim-verileri\\sonuclar\\"+yazar_adi+".txt", "r").read()
+            egitim_data = egitim_data.split(",")
+            egitim_data = list(egitim_data)
+            del egitim_data[-1]
+            toplam = 0
+            for siklik in range(len(egitim_data)):
+                  toplam += ((float(egitim_data[siklik])-float(test_data[siklik]))**2)
+            sonuclar[yazar_adi]=(sqrt(toplam))
+      sonuclar = sorted(sonuclar.items(), key=operator.itemgetter(1))
+      en_yakin_k_komsu_sonuc_yaz = open("C:\\Users\\Furkan\\Desktop\\yazar-tanima\\SONUC.txt",  "w")
+      for sonuc in range(k):
+            en_yakin_k_komsu_sonuc_yaz.write("En Yakın "+str(sonuc+1)+". Tahmin= "+str(sonuclar[sonuc])+"\n")
+      en_yakin_k_komsu_sonuc_yaz.close()
+      print u"En Yakın K-Komşu Algoritması Uygulandı."
+      print u"Sonuclar Gösteriliyor."
+      os.system('sonuc.bat')
+
+os.system('isim_cek.bat')
 egitim_isim_duzenle()
 test_isim_duzenle()
 egitim_metin_duzenle()
@@ -117,3 +154,5 @@ test_metin_duzenle()
 kelimeler()
 egitim_kelime_say()
 test_kelime_say()
+test_data_al()
+en_yakin_k_komsu(3)

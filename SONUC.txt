@@ -1,0 +1,3 @@
+En Yakın 1. Tahmin= ('sevilay-yilman', 32.64965543462902)
+En Yakın 2. Tahmin= ('fatih-altayli', 35.94440151122286)
+En Yakın 3. Tahmin= ('mehmet-soysal', 36.08323710533743)
