@@ -1,10 +1,1 @@
-En Yakın 1. Tahmin= ('fehmi-koru-(7)', 0.0)
-En Yakın 2. Tahmin= ('fuat-ugur', 41.916583830269374)
-En Yakın 3. Tahmin= ('sevilay-yilman', 42.15447781671598)
-En Yakın 4. Tahmin= ('markar-esayan', 42.40283009422838)
-En Yakın 5. Tahmin= ('hasmet-babaoglu', 42.86023798347368)
-En Yakın 6. Tahmin= ('sebnem-bursali', 43.40506882842141)
-En Yakın 7. Tahmin= ('arslan-bulut', 43.474130238568314)
-En Yakın 8. Tahmin= ('serdar-turgut-(2)', 43.61192497471305)
-En Yakın 9. Tahmin= ('deniz-zeyrek', 43.634848458542855)
-En Yakın 10. Tahmin= ('fadime-ozkan', 43.86342439892262)
+﻿

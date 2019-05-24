@@ -6,7 +6,6 @@ ahmet-hakan
 ahmet-kekec
 ahmet-takan
 akif-beki-(2)
-akif-beki
 ali-karahasanoglu
 arslan-bulut
 arslan-tekin
@@ -28,7 +27,6 @@ fehmi-koru-(4)
 fehmi-koru-(5)
 fehmi-koru-(6)
 fehmi-koru-(7)
-fehmi-koru
 fuat-ugur
 hakan-albayrak
 hakan-celik
@@ -44,7 +42,6 @@ markar-esayan
 mehmet-barlas
 mehmet-metiner
 mehmet-saker
-mehmet-soysal-(2)
 mehmet-soysal
 melih-altinok
 murat-celik

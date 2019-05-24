@@ -1,4 +1,4 @@
-fehmi-koru-(7).txt
+akif-beki.txt
 testler
 yazarlar.bat
 yazarlar.txt
