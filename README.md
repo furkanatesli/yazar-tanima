@@ -1,1 +1,3 @@
 # yazar-tanima
+
+Bu çalışmada, Veri Madenciliğinde Bellek Tabanlı Sınıflandırma Algoritmalarından KNN(En Yakın KKomşu) Algoritması kullanılarak seçilen bazı haber kaynaklarındaki yazarlara ait metinlerden kelimelerine göre özellik çıkarımı yapılarak yeni eklenen yazının kim tarafından yazıldığının tahmin edilmesi amaçlanmıştır. Haber kaynaklarındaki veriler alındıktan sonra gerekli dönüşüm ve hesaplamaların Python ortamında yapılarak En Yakın K-Komşu Algoritması için uygun hale getirilecektir. Bu sayede elde edilen niteliklere göre kaynağa yeni eklenen yazının nitelikleri karşılaştırılıp seçilen K sayısına göre yeni yazının kim tarafından yazıldığının tahmini yapılmıştır.
